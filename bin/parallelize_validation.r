@@ -5,15 +5,15 @@
     library(stringr)
 
 # Set working directory
-    setwd('/project/holstegelab/Share/nicco/collaborations/Joan/CNV_validation/')
+    setwd('CNV_validation_wrapper/')
 
 # Data paths
-    input_path <- '/project/holstegelab/Share/nicco/collaborations/Joan/CNV_validation/input_data'
+    input_path <- '/path_to/input_data'
     snps_path <- paste0(input_path, '/SNPs_input.txt')
     cnvs_path <- paste0(input_path, '/CNVs_info_pennCNV.txt')
     samples_path <- paste0(input_path, '/IDs_pacbio_passed_sampleQC_updated.txt')
     model_path <- str_replace_all(input_path, 'input_data', 'trained_models/joint.rds')
-    output_path <- '/project/holstegelab/Share/nicco/collaborations/Joan/CNV_validation/results/'
+    output_path <- '/path_to/output_data/'
 
 # Read data
     snps <- fread(snps_path, header = TRUE, stringsAsFactors = FALSE)

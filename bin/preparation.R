@@ -34,14 +34,14 @@
 
 # Make sure the data is in the right format
     # Define original samples path
-    samples_path <- '/project/holstegelab/Share/joan/CNVs/data/IDs_pacbio_passed_sampleQC.txt'
-    snps_path <- '/project/holstegelab/Share/gwas_array/Raw_arraydata_CNVs/IQ_dementia/data/Input_PennCNV_GSAV1_customcontent/CNVinput.Index'
-    cnvs_path <- '/project/holstegelab/Share/gwas_array/Raw_arraydata_CNVs/IQ_dementia/data/Output_PennCNV_GSAV1_customcontent/GSA1_customcontent_20210824.rawcnv'
+    samples_path <- '/path/to/samples.txt'
+    snps_path <- '/path/to/snps.txt'
+    cnvs_path <- '/path/to/cnvs.txt'
     # Define new data path where to place reformatted data and the tabix-indexed files
-    new_data_path_raw <- "/project/holstegelab/Share/nicco/collaborations/Joan/CNV_validation/input_data/raw_intensity_files"
-    new_data_path <- "/project/holstegelab/Share/nicco/collaborations/Joan/CNV_validation/input_data/tabix_indexed_files"
+    new_data_path_raw <- "/path_to/input_data/raw_intensity_files"
+    new_data_path <- "/path_to/input_data/tabix_indexed_files"
     # Define path to the input data for SNPs, CNVs and samples
-    outdir = '/project/holstegelab/Share/nicco/collaborations/Joan/CNV_validation/input_data'
+    outdir = '/path_to/input_data'
     # Create the directory if it does not exist
     if (!dir.exists(outdir)) { dir.create(outdir, recursive = TRUE) }
     if (!dir.exists(new_data_path)) { dir.create(new_data_path, recursive = TRUE)}
