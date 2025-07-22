@@ -28,6 +28,7 @@ The `preparation.r` script will make sure the required packages and input files 
 - creates tabix indexed files of the raw intensity data, and adapt the `sample` file  
 - adapt the `snp` file  
 - adapt the `cnv` file  
+*Note that the steps in the `preparation.r` script may be dataset-specific, and may need to be slightly adapted to your case. Please consult the example data `example_data/after_preparation`, and make sure your input data aligns with these.*
 
 The `parallelize_validation.r` will submit the CNValidatron package. Depending on how many `{n_cpu}` are defined, it will create `{n_cpu}` batches each including the same number of samples. The batches will then run in parallel, each using a single thread. By default, each batch will be run as:
 `Rscript validation_CNV.R --batch {batch_id} --snps /path/to/snps.txt --cnvs /path/to/cnvs.txt --samples /output_directory/{batch_id}/samples.txt --model /path/to/trained_model.rds --outdir /output_directory/{batch_id}`  
